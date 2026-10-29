@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-handwriting: 'Caveat', cursive, sans-serif;
+  --font-notes: 'Patrick Hand', cursive, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* Notebook Paper Backgrounds */
+.paper-moleskine {
+  background-color: #faf7ee;
+  background-image: 
+    linear-gradient(to right, rgba(148, 163, 184, 0.14) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.14) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.paper-grid {
+  background-color: #ffffff;
+  background-image: 
+    linear-gradient(to right, rgba(100, 116, 139, 0.12) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(100, 116, 139, 0.12) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.paper-ruled {
+  background-color: #fdfbf7;
+  background-image: linear-gradient(transparent 31px, rgba(148, 163, 184, 0.22) 32px);
+  background-size: 100% 32px;
+}
+
+.paper-blueprint {
+  background-color: #0b1d3a;
+  background-image: 
+    linear-gradient(to right, rgba(56, 189, 248, 0.15) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(56, 189, 248, 0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.paper-chalkboard {
+  background-color: #1a221f;
+  background-image: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.03) 0%, transparent 80%);
+}
+
+/* Margin Red Rule Line on left of notebook */
+.notebook-margin-line {
+  position: relative;
+}
+.notebook-margin-line::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 3.5rem;
+  width: 2px;
+  background-color: rgba(248, 113, 113, 0.35);
+  pointer-events: none;
+}
+
+/* Highlighter pens */
+.highlight-yellow {
+  background: linear-gradient(104deg, rgba(254, 240, 138, 0.7) 0.9%, rgba(253, 224, 71, 0.6) 98.4%);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.highlight-green {
+  background: linear-gradient(104deg, rgba(187, 247, 208, 0.75) 0.9%, rgba(134, 239, 172, 0.6) 98.4%);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.highlight-blue {
+  background: linear-gradient(104deg, rgba(186, 230, 253, 0.75) 0.9%, rgba(125, 211, 252, 0.6) 98.4%);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.highlight-pink {
+  background: linear-gradient(104deg, rgba(251, 207, 232, 0.75) 0.9%, rgba(244, 114, 182, 0.45) 98.4%);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* Washi Tape Strip */
+.washi-tape {
+  position: relative;
+}
+.washi-tape::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-1deg);
+  width: 80px;
+  height: 22px;
+  background: rgba(254, 243, 199, 0.85);
+  border-left: 2px dashed rgba(217, 119, 6, 0.3);
+  border-right: 2px dashed rgba(217, 119, 6, 0.3);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Notebook Spiral Binding visual */
+.spiral-holes {
+  background-image: radial-gradient(circle, #cbd5e1 35%, transparent 40%);
+  background-size: 20px 24px;
+}
+
+/* Ink color styles */
+.ink-pen {
+  color: #1e3a8a; /* Deep fountain blue */
+}
+.ink-sepia {
+  color: #451a03;
+}
+.ink-graphite {
+  color: #334155;
+}
+
+/* Print styling */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+  }
+}

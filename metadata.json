@@ -1,0 +1,6 @@
+{
+  "name": "Gen AI Illustrated Master Notes",
+  "description": "A comprehensive handwritten study notebook and interactive visual guide covering Generative AI from foundational machine learning and math to modern transformers, LLM training, agents, RAG, and real-world production systems.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
